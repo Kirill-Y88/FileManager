@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="y88.kirill.filemanager.controller.PanelController"
+            prefHeight="540.0" prefWidth="600.0">
+    <children>
+        <HBox prefHeight="30.0" prefWidth="600.0">
+            <children>
+                <ComboBox focusTraversable="false" prefHeight="30.0" prefWidth="60.0" fx:id="disk" onAction="#selectDisk" />
+                <TextField prefHeight="30.0" prefWidth="480.0" fx:id="pathField" />
+                <Button focusTraversable="false" onAction="#BtnUp" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="Вверх" fx:id="btnUp"/>
+            </children>
+        </HBox>
+        <TableView prefHeight="510.0" prefWidth="600.0" fx:id="table" />
+    </children>
+
+    <properties>
+        <ctrl><fx:reference source="controller"/></ctrl>
+    </properties>
+
+</VBox>

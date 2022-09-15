@@ -12,9 +12,10 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="y88.kirill.filemanager.controller.FileManagerController">
    <children>
-      <MenuBar prefHeight="30.0" prefWidth="1000.0">
+      <MenuBar prefHeight="30.0" prefWidth="1200.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -39,40 +40,16 @@
             </Menu>
         </menus>
       </MenuBar>
-      <HBox prefHeight="540.0" prefWidth="1000.0">
-         <children>
-            <VBox prefHeight="540.0" prefWidth="500.0">
-               <children>
-                  <HBox prefHeight="30.0" prefWidth="500.0">
-                     <children>
-                        <ComboBox prefHeight="30.0" prefWidth="60.0" />
-                        <TextField prefHeight="30.0" prefWidth="380.0" />
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="Button" />
-                     </children>
-                  </HBox>
-                  <TableView prefHeight="510.0" prefWidth="500.0" />
-               </children>
-            </VBox>
-            <VBox prefHeight="540.0" prefWidth="500.0">
-               <children>
-                  <HBox prefHeight="30.0" prefWidth="500.0">
-                     <children>
-                        <ComboBox prefHeight="30.0" prefWidth="60.0" />
-                        <TextField prefHeight="30.0" prefWidth="380.0" />
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="Button" />
-                     </children>
-                  </HBox>
-                  <TableView prefHeight="510.0" prefWidth="500.0" />
-               </children>
-            </VBox>
-         </children>
+      <HBox prefHeight="540.0" prefWidth="1200.0">
+          <fx:include fx:id="leftPanel" source="panel.fxml" HBox.hgrow="ALWAYS" />
+          <fx:include fx:id="rightPanel" source="panel.fxml" HBox.hgrow="ALWAYS" />
       </HBox>
-      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="1000.0">
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="1200.0">
          <children>
-            <Button fx:id="copy" mnemonicParsing="false" text="Копировать" />
-            <Button fx:id="move" mnemonicParsing="false" text="Переместить" />
-            <Button fx:id="delete" mnemonicParsing="false" text="Удалить" />
-            <Button fx:id="rename" mnemonicParsing="false" text="Переименовать" />
+            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="copy" mnemonicParsing="false" text="Копировать" onAction="#copyBtn" />
+            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="move" mnemonicParsing="false" text="Переместить" onAction="#moveBtn"/>
+            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="delete" mnemonicParsing="false" text="Удалить" onAction="#deleteBtn"/>
+            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="rename" mnemonicParsing="false" text="Переименовать" />
          </children>
          <effect>
             <Blend mode="OVERLAY" />

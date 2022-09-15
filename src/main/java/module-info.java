@@ -12,4 +12,6 @@ module y88.kirill.filemanager {
 
     opens y88.kirill.filemanager to javafx.fxml;
     exports y88.kirill.filemanager;
+    exports y88.kirill.filemanager.controller;
+    opens y88.kirill.filemanager.controller to javafx.fxml;
 }
