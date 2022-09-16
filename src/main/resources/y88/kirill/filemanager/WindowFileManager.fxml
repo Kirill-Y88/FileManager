@@ -49,7 +49,10 @@
             <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="copy" mnemonicParsing="false" text="Копировать" onAction="#copyBtn" />
             <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="move" mnemonicParsing="false" text="Переместить" onAction="#moveBtn"/>
             <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="delete" mnemonicParsing="false" text="Удалить" onAction="#deleteBtn"/>
-            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="rename" mnemonicParsing="false" text="Переименовать" />
+            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="rename" mnemonicParsing="false" text="Переименовать" onAction="#renameBtn" />
+            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="mkdir" mnemonicParsing="false" text="Создать" onAction="#createBtn" />
+            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="update" mnemonicParsing="false" text="Обновить" onAction="#updateBtn" />
+            <Button maxWidth="Infinity" HBox.hgrow="ALWAYS" focusTraversable="false" fx:id="search" mnemonicParsing="false" text="Найти" onAction="#searchBtn" />
          </children>
          <effect>
             <Blend mode="OVERLAY" />
