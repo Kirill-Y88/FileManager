@@ -225,5 +225,9 @@ public class FileManagerController {
     }
 
 
+    public void menuInfo(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.NONE, "Да чем я могу тебе помочь, дружище, самому помощь нужна..", ButtonType.FINISH);
+        alert.showAndWait();
+    }
 
 }

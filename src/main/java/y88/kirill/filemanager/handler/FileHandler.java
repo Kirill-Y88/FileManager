@@ -1,10 +1,12 @@
 package y88.kirill.filemanager.handler;
 
+import y88.kirill.filemanager.FileInfo;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
-public interface FileHandler <T>{
+public interface FileHandler <T extends FileInfo>{
 
     List<T> viewDirectory(Path path) throws IOException;
     void delete (T t) throws IOException;
